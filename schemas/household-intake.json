@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nwo-dao.org/schemas/household-intake.json",
+  "title": "HouseholdIntakeProfile",
+  "type": "object",
+  "required": [
+    "householdId",
+    "primaryApplicant",
+    "county",
+    "householdSize",
+    "grossMonthlyIncomeUsd",
+    "monthlyUtilitiesUsd",
+    "liquidAssetsUsd"
+  ],
+  "properties": {
+    "householdId": { "type": "string" },
+    "primaryApplicant": {
+      "type": "object",
+      "required": ["firstName", "lastName", "ssnLast4", "address"],
+      "properties": {
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "ssnLast4": { "type": "string", "pattern": "^[0-9]{4}$" },
+        "address": { "type": "string" }
+      }
+    },
+    "county": { "type": "string", "default": "Vigo" },
+    "householdSize": { "type": "integer", "minimum": 1 },
+    "grossMonthlyIncomeUsd": { "type": "number", "minimum": 0 },
+    "monthlyUtilitiesUsd": { "type": "number", "minimum": 0 },
+    "liquidAssetsUsd": { "type": "number", "minimum": 0 }
+  }
+}
