@@ -1,0 +1,18 @@
+{
+  "name": "civic-aid-pipeline",
+  "version": "1.0.0",
+  "description": "Unified public benefits and emergency assistance enrollment engine evaluating household eligibility across SNAP, Medicaid, LIHEAP, and Indiana township trustee aid.",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "start": "npm --workspace=apps/aid-api-gateway run start"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
