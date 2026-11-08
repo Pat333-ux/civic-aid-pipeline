@@ -1,0 +1,11 @@
+civic-aid-pipeline/
+├── apps/
+│   └── aid-api-gateway/         # Express server evaluating eligibility & auto-filling packets
+├── packages/
+│   ├── eligibility-engine/      # Evaluates SNAP, LIHEAP, Medicaid & Indiana Trustee rules
+│   └── form-autofiller/         # Generates official aid application payloads & renewal alerts
+├── schemas/
+│   └── household-intake.json    # Standardized member intake schema
+├── package.json
+├── tsconfig.json
+└── docker-compose.yml
