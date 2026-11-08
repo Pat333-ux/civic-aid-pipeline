@@ -1,0 +1,12 @@
+{
+  "name": "@civic/form-autofiller",
+  "version": "1.0.0",
+  "main": "dist/autofiller.js",
+  "types": "dist/autofiller.d.ts",
+  "dependencies": {
+    "@civic/eligibility-engine": "*"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
