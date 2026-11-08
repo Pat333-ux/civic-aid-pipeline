@@ -1,0 +1,9 @@
+{
+  "name": "@civic/eligibility-engine",
+  "version": "1.0.0",
+  "main": "dist/engine.js",
+  "types": "dist/engine.d.ts",
+  "scripts": {
+    "build": "tsc"
+  }
+}
